@@ -1,0 +1,35 @@
+class application
+{
+    String name=" ";
+    int age;
+    int rollnumber;
+    int mark;
+    String address=" ";
+    void display()
+    {
+        System.out.println("name:"+name);
+        System.out.println("age:"+age);
+        System.out.println("rollnumber:"+rollnumber);
+        System.out.println("mark:"+mark);
+        System.out.println("address:"+address);
+    }
+}
+public class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner Sc=new Scanner(System.in);
+    application Student1=new application();
+    Student1.name=Sc.nextLine();
+    Student1.age =Sc.nextInt();
+    Student1.rollnumber=Sc.nextInt();
+    Student1.mark =Sc.nextInt();
+    Student1.address=Sc.next();
+    Student1.display();
+    application student2=new application();
+    student2.name=Sc.next();
+    student2.age =Sc.nextInt();
+    student2.rollnumber=Sc.nextInt();
+    student2.mark =Sc.nextInt();
+    student2.address=Sc.next();
+    student2.display();
