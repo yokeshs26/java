@@ -1,0 +1,32 @@
+import java.util.*;
+import java.util.Scanner;
+class Main{
+    public static void main(String[]args)
+    {
+        Scanner Sc=new Scanner(System.in);
+        String a=Sc.nextLine().toLowerCase() ;
+        if(ispalindrome(a)){
+        System.out.println("palindrome");
+        }
+        else
+        {
+            System.out.println("not palindrome");
+        }
+    }
+    static boolean ispalindrome(String a)
+    {
+        int left=0;
+        int right=a.length()-1;
+        while(left<right)
+        {
+        if(a.charAt(left)!=a.charAt(right))
+        {
+            return false;
+        }
+        left++;
+        right--;
+        }
+        return true;
+        
+    }
+}
