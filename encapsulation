@@ -1,0 +1,40 @@
+import java.util.*;
+import java.util.Scanner;
+class bike
+{
+    private String enginetype="petrol";
+    public int numberoftyres=2;
+    protected String brand="mt";
+    String colour="black";
+    public bike()
+    {
+        System.out.println("bike object created" );
+    }
+    public String getenginetype()
+    {
+        return enginetype;
+    }
+    public void setenginetype(String enginetype)
+    {
+        this.enginetype=enginetype;
+    }
+    public void showdetails()
+    {
+        System.out.println("brand:"+brand);
+        System.out.println("colour:"+colour);
+        System.out.println("tyres:"+numberoftyres);
+        System.out.println("engine:"+enginetype);
+    }
+}
+public class Main{
+    public static void main(String[]args)
+    {
+        Scanner Sc=new Scanner(System.in);
+        String a=Sc.nextLine();
+    bike mybike=new bike();
+    mybike.showdetails();
+    mybike.setenginetype("petrol");
+    System.out.println("after updating engine type:");
+    mybike.showdetails();
+}
+}
