@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.Scanner;
+class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner Sc=new Scanner(System.in);
+        int a=Sc.nextInt();
+        int[]b=new int[a];
+        for(int i=0;i<a;i++)
+        {
+            b[i]=Sc.nextInt();
+        }
+        Arrays.sort(b);
+        int count=1;
+        for(int i=1;i<a;i++)
+        {
+            if(b[i]==b[i-1])
+            {
+                count++;
+            }
+            else
+            {
+                System.out.println(b[i-1]+"occurs"+count+"times");
+                count=1;
+            }
+        }
+            System.out.println(b[a-1]+"occurs"+ count +"times");
+    }
+}
