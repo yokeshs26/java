@@ -1,0 +1,63 @@
+import java.util.*;
+
+class Main
+{
+    public static void main(String[]args)
+    {
+        Scanner Sc=new Scanner(System.in);
+        int a=Sc.nextInt();
+        int[][]arr=new int[a][a];
+        int count=0,v=0;
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<a;j++)
+            {
+            arr[i][j]=Sc.nextInt();
+            }
+        }
+        
+        
+        for(int i=0;i<a-1;i++)
+        {
+            if(arr[i][i]==arr[i+1][i+1])
+            {
+                count=1;
+                continue;
+            }
+            else
+            {
+                count=0;
+                break;
+            }
+        }
+        
+        for(int i=0;i<a;i++)
+        {
+            for(int j=0;j<a;j++)
+            {
+                if(i!=j)
+                {
+                    if(arr[i][j]==0)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        v=1;
+                        break;
+                    }
+                }
+            }
+        }
+        
+        if(count==1 && v==0)
+        {
+            System.out.print("diagonal");
+        }
+        else
+        {
+            System.out.print("No diagonal");
+        }
+        
+    }
+}
